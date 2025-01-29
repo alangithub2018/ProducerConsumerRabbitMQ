@@ -1,6 +1,6 @@
 # 🐰 RabbitMQ .NET Producer & Consumer 🎯
 
-![RabbitMQ](https://upload.wikimedia.org/wikipedia/commons/3/31/RabbitMQ_logo.svg) ![.NET](https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg)
+![RabbitMQ](https://upload.wikimedia.org/wikipedia/commons/7/71/RabbitMQ_logo.svg)
 
 Este proyecto es una solución en **.NET** que implementa un **Producer** y un **Consumer** utilizando **RabbitMQ**. Su propósito es demostrar la funcionalidad principal del intercambio de mensajes mediante colas, facilitando la comunicación entre servicios de manera eficiente y escalable. 🚀
 
