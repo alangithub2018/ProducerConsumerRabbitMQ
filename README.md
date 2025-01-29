@@ -2,44 +2,44 @@
 
 ![RabbitMQ](https://upload.wikimedia.org/wikipedia/commons/7/71/RabbitMQ_logo.svg)
 
-Este proyecto es una solución en **.NET** que implementa un **Producer** y un **Consumer** utilizando **RabbitMQ**. Su propósito es demostrar la funcionalidad principal del intercambio de mensajes mediante colas, facilitando la comunicación entre servicios de manera eficiente y escalable. 🚀
+This project is a **.NET** solution that implements a **Producer** and a **Consumer** using **RabbitMQ**. Its purpose is to demonstrate the core functionality of message exchange via queues, facilitating efficient and scalable communication between services. 🚀
 
-## 📌 Características
+## 📌 Features
 
-✅ Implementación de **RabbitMQ** en **.NET**  
-✅ **Producer**: Envía mensajes a la cola  
-✅ **Consumer**: Escucha y procesa los mensajes de la cola  
-✅ Uso de **Docker** para levantar un servidor RabbitMQ en segundos  
-✅ Ejemplo práctico y modular para pruebas y aprendizaje  
+✅ **RabbitMQ** implementation in **.NET**  
+✅ **Producer**: Sends messages to the queue  
+✅ **Consumer**: Listens and processes messages from the queue  
+✅ Uses **Docker** to quickly set up a RabbitMQ server  
+✅ Practical and modular example for testing and learning  
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 - 🟣 **.NET 6/7/8**
 - 🐰 **RabbitMQ**
-- 🐳 **Docker (Opcional)**
+- 🐳 **Docker (Optional)**
 
 ---
 
-## 📦 Instalación y Ejecución
+## 📦 Installation and Execution
 
-### 🚀 Paso 1: Clonar el Repositorio
+### 🚀 Step 1: Clone the Repository
 ```bash
-git clone https://github.com/tuusuario/rabbitmq-dotnet-example.git
+git clone https://github.com/youruser/rabbitmq-dotnet-example.git
 cd rabbitmq-dotnet-example
 ```
 
-### 🐳 Paso 2: Levantar RabbitMQ con Docker (Opcional)
-Si no tienes un servidor RabbitMQ instalado, puedes usar **Docker**:
+### 🐳 Step 2: Start RabbitMQ with Docker (Optional)
+If you do not have a RabbitMQ server installed, you can use **Docker**:
 ```bash
 docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
 ```
-Accede a la interfaz web de administración en:  
-🔗 **http://localhost:15672** (Usuario: `guest`, Contraseña: `guest`)
+Access the web administration panel at:  
+🔗 **http://localhost:15672** (Username: `guest`, Password: `guest`)
 
-### ⚙️ Paso 3: Configurar RabbitMQ en el Proyecto
-En `appsettings.json`, ajusta la configuración de RabbitMQ según tu entorno:
+### ⚙️ Step 3: Configure RabbitMQ in the Project
+Modify `appsettings.json` to match your environment:
 ```json
 "RabbitMQ": {
   "Host": "localhost",
@@ -48,50 +48,47 @@ En `appsettings.json`, ajusta la configuración de RabbitMQ según tu entorno:
 }
 ```
 
-### ▶️ Paso 4: Ejecutar el Producer y el Consumer
-Compila y ejecuta cada servicio en instancias separadas:
+### ▶️ Step 4: Run the Producer and Consumer
+Compile and run each service in separate instances:
 
-#### Producer (Envía mensajes)
+#### Producer (Sends messages)
 ```bash
 dotnet run --project Producer
 ```
-#### Consumer (Recibe y procesa mensajes)
+#### Consumer (Receives and processes messages)
 ```bash
 dotnet run --project Consumer
 ```
 
 ---
 
-## 📜 Ejemplo de Mensaje Enviado por el Producer
+## 📜 Example of a Message Sent by the Producer
 ```json
 {
   "id": "12345",
   "timestamp": "2025-01-29T10:00:00Z",
-  "message": "Hola desde RabbitMQ Producer en .NET!"
+  "message": "Hello from RabbitMQ Producer in .NET!"
 }
 ```
 
 ---
 
-## 📖 Explicación del Flujo
-1️⃣ **Producer** publica un mensaje en RabbitMQ.  
-2️⃣ **RabbitMQ** encola el mensaje en una **queue**.  
-3️⃣ **Consumer** se suscribe a la queue y recibe el mensaje automáticamente.  
-4️⃣ **Consumer** procesa el mensaje y lo muestra en consola.  
+## 📖 Workflow Explanation
+1️⃣ **Producer** publishes a message to RabbitMQ.  
+2️⃣ **RabbitMQ** queues the message.  
+3️⃣ **Consumer** subscribes to the queue and automatically receives the message.  
+4️⃣ **Consumer** processes the message and prints it to the console.  
 
 ---
 
-## 📌 Roadmap Futuro 🚀
-- [ ] Agregar **mecanismos de reintento** en el Consumer.  
-- [ ] Incluir **mensajes persistentes** para evitar pérdida de datos.  
-- [ ] Mejorar el logging y monitoreo del sistema.  
+## 📌 Future Roadmap 🚀
+- [ ] Add **retry mechanisms** in the Consumer.  
+- [ ] Implement **persistent messages** to prevent data loss.  
+- [ ] Improve logging and system monitoring.  
 
 ---
+Try asynchronous communication with **RabbitMQ and .NET** in a simple and practical way! 🐰🎯
 
-## 👨‍💻 Contribución y Contacto
-Si deseas mejorar el proyecto o reportar un problema, ¡los Pull Requests son bienvenidos! 🎉  
-📩 Contacto: [TuEmail@example.com](mailto:TuEmail@example.com)  
-
----
-
-¡Prueba la comunicación asíncrona con **RabbitMQ y .NET** de forma sencilla y práctica! 🐰🎯
+## 👨‍💻 Contribution and Contact
+If you want to improve the project or report an issue, pull requests are welcome! 🎉  
+📩 Contact: [licalan.sistemas@gmail.com](mailto:licalan.sistemas@gmail.com)  
